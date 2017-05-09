@@ -18,8 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 /////USERS
 Route::get('/home', 'HomeController@index')->name('home');
-///ADMINS
 
+///ADMINS
 Route::prefix('admin')->group(function(){
     Route::get('/login', 'Auth\AdminLoginController@showloginForm')->name('admin.Login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
